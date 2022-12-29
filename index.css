@@ -1,18 +1,128 @@
+
+:root {                     /* előre beállítjuk a színeket és innen csak válogatjuk */
+    --fekete: #3C3D3C;
+    --lightgray: #F3F6F4;
+    --gray: #9BAEBC;
+    --black: #000000;
+    --white: #ffffff;
+    --mainFont: 'Roboto', sans-serif;/*
+    --logoFont: 'Gloria Hallelujah', cursive;*/
+} 
+
 * {
     box-sizing: border-box;
-    margin: 0;
+    margin: 0; 
     padding: 0;
+    list-style: none;
+    text-decoration: none;
 }
 
 html {
     font-size: 10px;
+    
 }
+
+body {
+    background: var(--lightgray);
+    font-family: var(--mainFont);
+    color: var(--black);
+} 
 
 img {
     width: 100%;
     height: auto;
 }
 
-@media screen {
+.container {
+    font-size: 1rem;
+    margin: 0 auto;
+}
+
+.kontener-navbar {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    top: 0;
+    overflow: hidden;
+}
+                /* TABLET -----> */ 
+@media screen and (max-width:768px) {
+        .kontener-navbar__item {
+            visibility: hidden;
+    } 
+
+    header::after {
+        content: "menu";
+        position: absolute;
+        top: 1rem;
+        right: 0;
+        margin-right: 3rem;
+    }
+}
+@media screen and (min-width:768px) {
+    .container {
+        width: 100%;
+    }
+
+    .kontener-navbar {
+        grid-area: navbar;
+    }
+
+    .kontener-kep {
+        grid-area: navkep;
+    }
+
+    .kontener-focim {
+        grid-area: navcim;
+    }
+
+    .navbar-lista {
+        display: flex;
+        justify-content:flex-end;
+    }
+
+    .kontener-navbar__item {
+        margin: auto 1rem;
+    }
+
+    header::after {
+        content:none;
+    }
     
+    
+}
+
+                /* ASZTALI -----> */
+@media screen and (min-width: 992px) {
+    .container {
+        width: 100%;
+    }
+    .kontener-navbar {
+        grid-area: navbar;
+    }
+
+    .kontener-kep {
+        grid-area: navkep;
+    }
+
+    .kontener-focim {
+        grid-area: navcim;
+    }
+
+    header {
+        display: grid;
+        grid-template-areas:
+        "navbar navbar"
+        "navkep navcim"
+        ;
+    }
+
+    .navbar-lista {
+        display: flex;
+        justify-content:flex-end;
+    }
+
+    .kontener-navbar__item {
+        margin: auto 1rem;
+    }
 }

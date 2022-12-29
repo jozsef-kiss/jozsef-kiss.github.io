@@ -1,0 +1,40 @@
+
+                /* ------------- NAVBAR--------*/
+.kontener-navbar {
+   background-color: var(--fekete);
+   padding: 3rem;
+}
+
+.navbar-lista {
+    font-size: 1.5rem;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+}
+
+a:link, a:visited {
+    color: white;
+}
+            /* --------------KEP-----------*/
+.kontener-kep {
+    background-color: white;
+    padding: 5em;
+}
+
+            /* -----------------FŐCÍM-------------*/
+
+.kontener-focim {
+    background-color: white;
+    padding: 5em;
+}
+
+.kontener-focim__item {
+    text-align: center;
+    font-size: 4em;
+}
+
+.kontener-focim__h2 {
+    text-align: center;
+    font-size: 3em;
+}
+
+

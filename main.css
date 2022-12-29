@@ -1,0 +1,106 @@
+
+            /* -----------------RÓLAM--------------------- */
+.kontener-rolam {
+    background-color: var(--gray);
+    padding: 2em;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.kontener-rolam__cim {
+    padding: 1rem;
+}
+
+.kontener-rolam__szoveg {
+    text-align: justify;
+}
+
+            /* ------------------SZAKMAI ISMERETEK-------------- */
+.kontener-szakmai {
+    padding: 2em;
+    font-size: 1.5rem;
+}
+
+.kontener-szakmai__cim {
+    text-align: center;
+    padding: 1rem;
+}
+            
+            /* PORTFÓLIÓ */
+.kontener-portfolio {
+    background-color: var(--gray);
+    padding: 2em;
+    font-size: 1.5rem;
+}
+
+.kontener-portfolio__cim {
+    text-align: center;
+    padding: 1rem;
+}
+
+.kontener-portfolio__szoveg {
+    text-align: justify;
+}
+
+            /* --------------ÖNÉLETRAJZ ----------------*/
+.kontener-oneletrajz__tanulmanyok {
+    padding: 2em;
+    font-size: 1.5rem;
+}
+
+.kontener-oneletrajz__cim {
+    text-align: center;
+    padding: 1rem;
+}
+
+.kontener-oneletrajz__nyelv {
+    padding: 2em;
+    font-size: 1.5rem;
+}
+
+.kontener-oneletrajz__nyelv__cim {
+    text-align: center;
+    padding: 1rem;
+}
+
+.kontener-oneletrajz__eddigi {
+    padding: 2em;
+    font-size: 1.5rem;
+}
+
+.kontener-oneletrajz__eddigi__cim {
+    text-align: center;
+    padding: 1rem;
+}
+
+            /* ----------------KAPCSOLAT ------------------*/
+
+.kontener-kapcsolat {
+    padding: 2em;
+    font-size: 1.5rem;
+}
+
+.kontener-form{
+    padding: 2em;
+    font-size: 1.5rem;
+}
+
+.kontener-form-1 {
+    padding: 2em;
+    font-size: 1.5rem;
+}
+
+.kontener-form__uzenet {
+    padding: 2em;
+    font-size: 1.5rem;
+}
+
+.kontener-form_gomb {
+    padding: 1em;
+    font-size: 1.5rem;
+}
+
+.kontener-kapcsolat, .kontener-form {
+    background-color: var(--gray);
+    font-size: 1.5rem;
+}
