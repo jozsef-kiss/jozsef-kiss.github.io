@@ -9,52 +9,78 @@
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&display=swap" rel="stylesheet">
-    <title>Kiss József Portfólió oldala</title>
+    <title>Kiss József - Junior Front-end Fejlesztő</title>
 </head>
 <body>
-    <header class="container">
+    <header class="header">
                         <!-- NAVBAR -->
-        <nav class="container kontener-navbar">
-            <ul class="navbar-lista">
-                <li class="kontener-navbar__item"><a href="./index.html">Kezdőlap</a></li>
-                <li class="kontener-navbar__item"><a href="#rolam">Rólam</a></li>
-                <li class="kontener-navbar__item"><a href="#szakmaiismeretek">Szakmai ismeretek</a></li>
-                <li class="kontener-navbar__item"><a href="#portfolio">Portfólió</a></li>
-                <li class="kontener-navbar__item"><a href="#oneletrajz">Önéletrajz</a></li>
-                <li class="kontener-navbar__item"><a href="#kapcsolat">Kapcsolat</a></li>
-            </ul>
+        <nav class="kontener-navbar">
+            <div class="navbar-bal">
+                <a class="home" href="">LOGO</a>
+            </div>
+            <div class="navbar-jobb__menu">
+                <ul class="navbar-lista">
+                    <li class="navbar-item"><a href="./index.html">Kezdőlap</a></li>
+                    <li class="navbar-item"><a href="#rolam">Rólam</a></li>
+                    <li class="navbar-item"><a href="#szakmaiismeretek">Szakmai ismeretek</a></li>
+                    <li class="navbar-item"><a href="#portfolio">Portfólió</a></li>
+                    <li class="navbar-item"><a href="#oneletrajz">Önéletrajz</a></li>
+                    <li class="navbar-item"><a href="#kapcsolat">Kapcsolat</a></li>
+                </ul>
+            </div>
+            <!-- HAMBURGER MENÜ -->
+            <div class="menu">
+                <input type="checkbox" name="hamburger" id="menu__toggle"/>
+                <label for="menu__toggle" class="hamburger-button">
+                    <span class="hamburger-lines"></span>
+                </label> 
+                <ul class="menu__box">
+                    <li class="menu__item"><a href="./index.html">Kezdőlap</a></li>
+                    <li class="menu__item"><a href="#rolam">Rólam</a></li>
+                    <li class="menu__item"><a href="#szakmaiismeretek">Szakmai ismeretek</a></li>
+                    <li class="menu__item"><a href="#portfolio">Portfólió</a></li>
+                    <li class="menu__item"><a href="#oneletrajz">Önéletrajz</a></li>
+                    <li class="menu__item"><a href="#kapcsolat">Kapcsolat</a></li>
+                </ul>
+            </div>
         </nav>
                         <!-- HEADER FŐCÍM -->
-        <div class="container kontener-focim">
-            <h1 class="kontener-focim__item">Kiss József</h1>
-            <h2 class="kontener-focim__h2">Junior Front-end Fejlesztő</h2>
+        <div class="kontener-focim">
+            <div class="kontener-focim1">
+                <h1 class="kontener-focim__h1">Helló, a nevem <span class="span-focim-h1">Kiss József</span>,</h1>
+            </div>
+            <div class="kontener-focim2">
+                <h2 class="kontener-focim__h2"><span class="span-focim-h2">Junior Front-end</span> fejlesztő vagyok!</h2>
+            </div>
         </div>
+        
                         <!-- HEADER KÉP -->
-        <div class="container kontener-kep">
-            <p class="kontener-kep__item">KÉP</p>
+        <div class="kontener-kep">
+            <p class="alak"></p>
+            <img src="./Assets/portfolio.png" alt="portfolio_kep" class="kontener-kep__item"></img>
         </div>
         
     </header>
     <main class="container">   
                         <!-- RÓLAM -->
-        <div class="container kontener-rolam">
+        <div class="container kontener-rolam" id="rolam">
             <h2 class="kontener-rolam__cim">Rólam</h2>
                 <p class="kontener-rolam__szoveg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia accusantium veniam sit necessitatibus eveniet vitae assumenda ex quia ut reprehenderit tenetur, rerum minima adipisci quam reiciendis qui non consequatur enim, corporis doloribus, autem tempore sed maxime? Magnam saepe reprehenderit perspiciatis dicta incidunt dignissimos repellendus facilis, excepturi odio laborum architecto labore reiciendis quae rem aliquam molestiae id praesentium voluptatibus accusantium, harum laboriosam enim. Expedita accusamus doloremque nisi quidem modi ullam, laboriosam vel ipsa aliquid, ad, ut molestias dicta laborum dolorem! At, nihil ipsam omnis facilis aperiam sapiente dolores sint expedita, praesentium culpa veritatis inventore laudantium qui labore quo voluptates eum incidunt!</p>
         </div>
                         <!-- SZAKMAI ISMERETEK -->
-        <div class="container kontener-szakmai">
+        <div class="container kontener-szakmai" id="szakmaiismeretek">
             <h2 class="kontener-szakmai__cim">Szakmai ismeretek</h2>
                 <p class="kontener-szakmai__szoveg">HTML 5</p>
         </div>
                         <!-- PORTFÓLIÓ -->
-        <div class="container kontener-portfolio">
+        <div class="container kontener-portfolio" id="portfolio">
             <h2 class="kontener-portfolio__cim">Kiemelt munkáim</h2>
                 <p class="kontener-portfolio__szoveg">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus iste ea qui dolore amet porro commodi excepturi cumque delectus suscipit?</p>
                 <p class="kontener-portfolio__szoveg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi inventore quo autem eius doloribus ipsam mollitia molestias fugit accusamus ipsum?</p>
                 <p class="kontener-portfolio__szoveg">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim pariatur eos nemo eum doloremque saepe voluptatum numquam cumque rerum quod.</p>
         </div>
                         <!-- ÖNÉLETRAJZ -->
-        <div class="container kontener-oneletrajz">
+        <div class="container kontener-oneletrajz" id="oneletrajz">
             <div class="container kontener-oneletrajz__tanulmanyok">
                 <h2 class="kontener-oneletrajz__cim">Tanulmányok</h2>
                 <p class="kontener-oneletrajz__szoveg">Eszterházy Károly Főiskola</p>
@@ -76,7 +102,7 @@
             </div>
         </div>
                             <!-- KAPCSOLAT -->
-            <div class="container kontener-kapcsolat">
+            <div class="container kontener-kapcsolat" id="kapcsolat">
                 <h2 class="kontener-kapcsolat__cim">Kapcsolat</h2>
                 <p class="kontener-kapcsolat__szoveg">Ha bármilyen kérdésed van, keress bátran!</p>
             </div>
