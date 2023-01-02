@@ -153,13 +153,13 @@ a:hover {
     flex-direction: column;
     flex-wrap: wrap;
     background-color: white;
-    padding: 5em;
-    
+    padding: 8em;
+    margin-top: 50px;
 }
 
 .focim__h1 {
     text-align:center;
-    font-size: 4em;
+    font-size: 5em;
     margin: 3vh auto;
 }
 
