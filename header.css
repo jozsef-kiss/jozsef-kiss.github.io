@@ -19,12 +19,8 @@
 .navbar-logo {
     display: flex; 
     align-items: center;
-    top: 15px;
-    right: 30px;
-    width: 40px;
-    height: 40px;
     min-width: 80px;
-    max-width: 90px;
+    max-width: 80px;
     width: 9vw;
     justify-content: space-between;  
 }
