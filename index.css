@@ -15,10 +15,12 @@
     padding: 0;
     list-style: none;
     text-decoration: none;
+    
 }
 
 html {
     font-size: 10px;
+    scroll-behavior: smooth;
 }
 
 body {
