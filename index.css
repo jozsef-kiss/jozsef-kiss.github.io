@@ -32,11 +32,11 @@ body {
 img {
     width: 100%;
     height: auto;
+    
 }
 
 .container {
     font-size: 1rem;
-    margin: 0 auto;
 }
 
 .kontener-navbar {
@@ -93,14 +93,8 @@ img {
         font-size: 1.6rem;
         margin-right: 1.8rem;
         margin-left: 1.8rem;
-    }
+    } 
 
-
-            /* -------------- LOGO ............... */
-
-   
-    
-    
             /* --------- GRID ----------*/
     .kontener-navbar {
         grid-area: navbar;
@@ -131,6 +125,7 @@ img {
     .hamburger-lines::after{
         transition-property: none;
     }
+
 
 }
                 /* ASZTALI -----> */

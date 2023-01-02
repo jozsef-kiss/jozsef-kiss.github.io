@@ -1,32 +1,80 @@
 
             /* -----------------RÓLAM--------------------- */
 .kontener-rolam {
+    display: flex;
+    flex-direction: column;
     background-color: var(--gray);
     padding: 2em;
     font-size: 1.5rem;
-    text-align: center;
-}
-
-.kontener-rolam__cim {
-    padding: 1rem;
-}
-
-.kontener-rolam__szoveg {
     text-align: justify;
+    max-width: 100%;
+    max-height: auto;
+}
+
+.rolam__cim {
+    display: flex;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.rolam__szoveg {
+    text-align: justify;
+    justify-content: center;
+    max-width: 100%;
+    margin-bottom: 25px;
+}
+
+.udv-szoveg {
+    font-weight: 700;
+    font-size: 2rem;
+    
+}
+
+.udv-szoveg2 {
+    font-weight: 700;
+    margin-top: 20px;
 }
 
             /* ------------------SZAKMAI ISMERETEK-------------- */
 .kontener-szakmai {
+    display: flex;
+    flex-direction: column;
     padding: 2em;
     font-size: 1.5rem;
 }
 
-.kontener-szakmai__cim {
+.szakmai__cim {
     text-align: center;
-    padding: 1rem;
+    padding: 2rem;
+}
+
+.szakma {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 10vh;
+    margin-bottom: 10px;
+}
+
+.szakma_conti {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 50%;
+    height: 50%;
+}
+
+.szakmak {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    min-width: 80px;
+    max-width: 120px;
 }
             
-            /* PORTFÓLIÓ */
+            /*--------------- PORTFÓLIÓ -----------------*/
 .kontener-portfolio {
     background-color: var(--gray);
     padding: 2em;
@@ -35,11 +83,13 @@
 
 .kontener-portfolio__cim {
     text-align: center;
-    padding: 1rem;
+    padding: 2rem;
 }
 
-.kontener-portfolio__szoveg {
-    text-align: justify;
+.kontener-portfolio__cim {
+    justify-content: center;
+    background-color: var(--gray);
+    font-size: 2.5em;
 }
 
             /* --------------ÖNÉLETRAJZ ----------------*/
@@ -50,7 +100,7 @@
 
 .kontener-oneletrajz__cim {
     text-align: center;
-    padding: 1rem;
+    padding: 2rem;
 }
 
 .kontener-oneletrajz__nyelv {
@@ -71,6 +121,17 @@
 .kontener-oneletrajz__eddigi__cim {
     text-align: center;
     padding: 1rem;
+}
+
+.onelet-lista {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.onelet-item {
+    list-style-type: square;
+    margin: 10px;
 }
 
             /* ----------------KAPCSOLAT ------------------*/
@@ -103,4 +164,48 @@
 .kontener-kapcsolat, .kontener-form {
     background-color: var(--gray);
     font-size: 1.5rem;
+}
+
+.kontener-kapcsolat__szoveg {
+    padding-top: 10px;
+}
+
+@media screen and (min-width:768px) {
+
+    /* ---------- SZAKMAI -------------*/
+    .szakma {
+        height: 20vh;
+    }
+
+    .szakmak {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        min-width: 80px;
+        max-width: 200px;
+    }
+
+    .onelet-lista {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* ----------- PORETFÓLIÓ ---------*/
+
+    .kontener-portfolio {
+        background-color: var(--gray);
+        padding: 2em;
+        font-size: 1.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .portfolio-project {
+        width: 50%;
+        padding: 5px;
+    }
+
 }
