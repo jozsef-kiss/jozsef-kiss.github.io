@@ -72,6 +72,7 @@
     flex-wrap: wrap;
     min-width: 80px;
     max-width: 120px;
+    margin: 10px;
 }
             
             /*--------------- PORTFÓLIÓ -----------------*/
@@ -142,23 +143,60 @@
 }
 
 .kontener-form{
-    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    padding: 0em;
     font-size: 1.5rem;
 }
 
 .kontener-form-1 {
-    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
     font-size: 1.5rem;
 }
 
+.kontener-form__nev {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #F3F6F4;
+}
+
+.kontener-form__email {
+    padding: 15px;
+    border: 2px solid #F3F6F4;
+}
+
+.kontener-form-2 {
+    padding: 15px;
+}
+
 .kontener-form__uzenet {
-    padding: 2em;
+    padding: 15px;
+    font-size: 1.5rem;
+    width: 100%;
+    border: 2px solid #F3F6F4;
+}
+
+.form-gomb {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 15px;
     font-size: 1.5rem;
 }
 
 .kontener-form_gomb {
-    padding: 1em;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 15px;
     font-size: 1.5rem;
+    border: 3px solid #3C3D3C;
+    background-color: #9BAEBC;
+    color: #3C3D3C;
+    font-weight: 700;
+    cursor: pointer;
 }
 
 .kontener-kapcsolat, .kontener-form {
@@ -192,7 +230,7 @@
         align-items: center;
     }
 
-    /* ----------- PORETFÓLIÓ ---------*/
+    /* ----------- PORTFÓLIÓ ---------*/
 
     .kontener-portfolio {
         background-color: var(--gray);
@@ -208,4 +246,106 @@
         padding: 5px;
     }
 
+            /* --------------------- KAPCSOLAT -------------------*/
+
+    .kapcsolat {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .kontener-kapcsolat {
+        display: flex;
+        max-width: 100%;
+    }
+
+    .kontener-form{
+        display: flex;
+        flex-direction: column;
+        padding: 0em;
+        font-size: 1.5rem;
+        max-width: 100%;
+    }
+
+    .kontener-form-1 {
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+        font-size: 1.5rem;
+        max-width: 100%;
+    }
+
+    .kontener-form__nev {
+        padding: 15px;
+        margin-bottom: 20px;
+        border: 2px solid #F3F6F4;
+
+    }
+
+    .kontener-form__email {
+        padding: 15px;
+        border: 2px solid #F3F6F4;
+    }
+
+    .kontener-form-2 {
+        padding: 15px;
+    }
+
+    .kontener-form__uzenet {
+        padding: 15px;
+        font-size: 1.5rem;
+        width: 100%;
+        border: 2px solid #F3F6F4;
+    }
+
+    .form-gomb {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 15px;
+        font-size: 1.5rem;
+    }
+
+    .kontener-form_gomb {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 15px;
+        font-size: 1.5rem;
+        border: 3px solid #3C3D3C;
+        background-color: #9BAEBC;
+        color: #3C3D3C;
+        font-weight: 700;
+        cursor: pointer;
+    }
+
+    .kontener-kapcsolat {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .kontener-rolam {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--gray);
+        padding: 2em;
+        font-size: 1.5rem;
+        max-width: 100%;
+        max-height: auto;
+    }
+    
+    .rolam__cim {
+        display: flex;
+        padding: 2rem;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .rolam__szoveg {
+        text-align: center;
+        max-width: 100%;
+        margin: 30px;
+    }
 }
