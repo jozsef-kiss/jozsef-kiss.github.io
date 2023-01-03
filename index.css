@@ -59,7 +59,7 @@ img {
     .container {
         width: 100%;
     }
-    
+                /* -------------- NAVBAR ----------------*/
     .kontener-navbar {
         display: flex;
         flex-direction: row;

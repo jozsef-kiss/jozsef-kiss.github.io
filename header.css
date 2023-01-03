@@ -1,6 +1,4 @@
 
-                /* ------------- NAVBAR--------*/
-
                 /* -------- KONTÉNER ------------*/
 
 .kontener-navbar {
@@ -127,6 +125,7 @@
 }
 
             /* ---------------- LINK SZÍN ---------------*/
+            
 a:link, a:visited {
     color: white;
 }
@@ -136,6 +135,7 @@ a:hover {
 }
 
             /* --------------KEP-----------*/
+
 .kontener-kep {
     display: flex;
     justify-content: flex-end;

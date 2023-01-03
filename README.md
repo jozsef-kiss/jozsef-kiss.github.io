@@ -1,2 +1,4 @@
 # jozsef-kiss.github.io
-Portfolio Website
+Portfolió oldal
+
+A portfólió oldal kizárólag HTML és CSS segítségével készült.

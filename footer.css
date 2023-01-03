@@ -1,9 +1,13 @@
+
+        /* --------------- FOOTER KONTÉNER --------------*/
+
 .footer {
     display: flex;
     width: 100%;
     flex-direction: column;
 }
-
+        /* -------------- FOOTER SZÖVEG --------------- */
+        
 .kontener-footer {
     display: flex;
     background-color: var(--fekete);
@@ -14,6 +18,7 @@
     justify-content: center;
 
 }
+        /* --------------- FOOTER IKONOK ------------------*/
 
 .footer-ikonok {
     display: flex;
