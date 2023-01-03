@@ -16,6 +16,7 @@
     padding: 2rem;
     justify-content: center;
     align-items: center;
+    font-size: 35px;
 }
 
 .rolam__szoveg {
@@ -48,6 +49,7 @@
 .szakmai__cim {
     text-align: center;
     padding: 2rem;
+    font-size: 35px;
 }
 
 .szakma {
@@ -93,6 +95,7 @@
     justify-content: center;
     background-color: var(--gray);
     font-size: 2.5em;
+    font-size: 35px;
 }
 
             /* --------------ÖNÉLETRAJZ ----------------*/
@@ -105,6 +108,7 @@
 .kontener-oneletrajz__cim {
     text-align: center;
     padding: 2rem;
+    font-size: 25px;
 }
 
 .kontener-oneletrajz__nyelv {
@@ -115,6 +119,7 @@
 .kontener-oneletrajz__nyelv__cim {
     text-align: center;
     padding: 1rem;
+    font-size: 25px;
 }
 
 .kontener-oneletrajz__eddigi {
@@ -125,6 +130,7 @@
 .kontener-oneletrajz__eddigi__cim {
     text-align: center;
     padding: 1rem;
+    font-size: 25px;
 }
 
 .onelet-lista {
