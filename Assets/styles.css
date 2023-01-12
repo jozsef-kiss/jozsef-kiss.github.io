@@ -1,21 +1,19 @@
-
-:root {                     /* előre beállítjuk a színeket és innen csak válogatjuk */
+:root {
     --fekete: #3C3D3C;
     --lightgray: #F3F6F4;
     --gray: #9BAEBC;
     --black: #000000;
     --white: #ffffff;
-    --mainFont: 'Roboto', sans-serif;/*
-    --logoFont: 'Gloria Hallelujah', cursive;*/
-} 
+    --mainFont: 'Roboto', sans-serif;
+}
 
 * {
     box-sizing: border-box;
-    margin: 0; 
+    margin: 0;
     padding: 0;
     list-style: none;
     text-decoration: none;
-    
+
 }
 
 html {
@@ -27,732 +25,1173 @@ body {
     background: var(--lightgray);
     font-family: var(--mainFont);
     color: var(--black);
-} 
+}
 
 img {
     width: 100%;
     height: auto;
-    
 }
 
 .container {
     font-size: 1rem;
 }
 
+/* ----------------------------------HEADER-----------------------------------------------------*/
+
+/* -------- KONTÉNER ------------*/
+
 .kontener-navbar {
     position: fixed;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--fekete);
+    padding: 3rem;
+    min-height: 80px;
+    max-height: 80px;
+    width: 100%;
+    margin-top: 0;
+    top: 0;
+    justify-content: space-between;
+    z-index: 10000;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px gray;
+}
+
+/*------------- LOGÓ --------------*/
+
+.navbar-logo {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    min-width: 55px;
+    max-width: 55px;
+    width: 9vw;
+    top: 15px;
+    right: 30px;
+    justify-content: space-between;
+}
+
+/*-------------- MENÜ ---------------*/
+
+.navbar-menu {
+    display: flex;
+    visibility: visible;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.navbar-lista {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+/*--------------------HAMBURGER -----------*/
+
+.hamburger-button {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    left: 30px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.hamburger-lines,
+.hamburger-lines::before,
+.hamburger-lines::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    transition-duration: 0.2s;
+}
+
+.hamburger-lines::before {
+    content: "";
+    top: -10px;
+}
+
+.hamburger-lines::after {
+    content: "";
+    top: 10px;
+}
+
+.menu__box {
+    display: block;
+    position: fixed;
+    width: 300px;
+    padding: 70px 0;
+    background-color: var(--fekete);
+    color: white;
+    top: 15px;
+    left: 10px;
+    height: 100%;
+    visibility: hidden;
+    box-shadow: 3px 0 8px var(--fekete);
+    /* átmenet balról */
+    left: -300px;
+    transition-duration: 0.5s;
+}
+
+.menu__item {
+    padding: 20px 30px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.menu__item:hover {}
+
+#menu-toggle {
+    visibility: hidden;
+}
+
+#menu-toggle:checked~.menu__box {
+    visibility: visible;
+    left: 0;
+}
+
+#menu-toggle:checked~.hamburger-button .hamburger-lines {
+    transform: rotate(45deg);
+}
+
+#menu-toggle:checked~.hamburger-button .hamburger-lines::before {
+    display: none;
+}
+
+#menu-toggle:checked~.hamburger-button .hamburger-lines::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+/* ---------------- LINK SZÍN ---------------*/
+
+a:link,
+a:visited {
+    color: white;
+}
+
+a:hover {
+    color: var(--gray);
+}
+
+/*---------------------------------------MAIN---------------------------------------------------*/
+
+/* --------------HEADER-KÉP-----------*/
+
+.kontener-kep {
+    display: none;
+}
+
+/* -------------HEADER-SZÖVEG-------------*/
+
+.kontener-focim {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding: 8em;
+    position: relative;
+    font-size: 1.2rem;
+    background-color: #F3F6F4;
+}
+
+.focim__h1 {
+    text-align: center;
+    font-size: 3em;
+    margin: 10vh auto;
+}
+
+.span-focim-h1 {
+    text-transform: uppercase;
+    color: #3C3D3C;
+}
+
+.focim__h2 {
+    height: 120px;
+    text-align: center;
+    font-size: 3em;
+}
+
+
+/* -----------------RÓLAM--------------------- */
+
+.kontener-rolam {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--gray);
+    padding: 2em;
+    text-align: justify;
+    max-width: 100%;
+
+}
+
+.rolam__szoveg {
+    text-align: justify;
+    max-width: 100%;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.rolam__cim {
+    display: flex;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+}
+
+.udv-szoveg {
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+.udv-szoveg2 {
+    font-weight: 700;
+    margin-top: 2rem;
+}
+
+
+/* ------------------SZAKMAI ISMERETEK-------------- */
+
+.kontener-szakmai {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    font-size: 1.5rem;
+}
+
+.szakmai__cim {
+    text-align: center;
+    padding: 2rem;
+    font-size: 2.5rem;
+}
+
+.szakma {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 10vh;
+    margin-bottom: 50px;
+}
+
+.szakma_conti {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 50%;
+    height: 50%;
+}
+
+.szakmak {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    min-width: 80px;
+    max-width: 90px;
+    margin: 10px;
+}
+
+/*--------------- MUNKÁIM -----------------*/
+
+.kontener-munkaim {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     height: auto;
-    top: 0;
-    overflow: hidden;
+    background-color: var(--gray);
+}
+
+.kontener-munkaim__cim {
+    justify-content: center;
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 2rem;
+}
+
+.munkaim-project-konti {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.munkaim-project {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: auto;
+    box-shadow: 2px 2px 5px black;
+    margin-bottom: 40px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.munkaim-project-konti:hover .munkaim-project:not(:hover)  {
+    filter: grayscale(100%);
+    opacity: 0.75;
+}
+
+.munkaim-project-konti:hover .munkaim-project:not(:hover)::after  {
+    background-color: rgba(#000, 0.5);
+}
+
+.munkaim-project::after {
+    background-color: rgba(#000, 0);
+    transition: .3s;
+}
+
+/* --------------ÖNÉLETRAJZ----------------*/
+
+.kontener-oneletrajz__tanulmanyok {
+    padding: 2em;
+    font-size: 1.5rem;
+    margin-left: 15px;
+}
+
+.kontener-oneletrajz__cim {
+    text-align: center;
+    padding: 2rem;
+    font-size: 2.5rem;
+}
+
+.kontener-oneletrajz__nyelv {
+    padding: 2em;
+    margin-left: 15px;
+    font-size: 1.5rem;
+}
+
+.kontener-oneletrajz__nyelv__cim {
+    text-align: center;
+    padding: 2rem;
+    font-size: 2.5rem;
+}
+
+.kontener-oneletrajz__tovabbi {
+    padding: 2em;
+    margin-left: 15px;
+    font-size: 1.5rem;
+}
+
+.kontener-oneletrajz__tovabbi__cim {
+    text-align: center;
+    padding: 2rem;
+    font-size: 2.5rem;
+}
+
+.onelet-lista {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.onelet-item {
+    list-style-type: square;
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+/* ----------------KAPCSOLAT ------------------*/
+
+.kontener-kapcsolat {
+    padding: 2em;
+    font-size: 1.5rem;
+}
+
+.kontener-form {
+    display: flex;
+    flex-direction: column;
+    padding: 0em;
+    font-size: 1.5rem;
+}
+
+.kontener-form-1 {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    font-size: 1.5rem;
+}
+
+.kontener-form__nev {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #F3F6F4;
+}
+
+.kontener-form__email {
+    padding: 15px;
+    border: 2px solid #F3F6F4;
+}
+
+.kontener-form-2 {
+    padding: 15px;
+}
+
+.kontener-kapcsolat,
+.kontener-form {
+    background-color: var(--gray);
+    font-size: 1.5rem;
+}
+
+.kontener-kapcsolat__szoveg {
+    padding-top: 10px;
+    font-size: 1.8rem;
+}
+
+.kontener-kapcsolat__cim {
+    font-size: 2.5rem;
+}
+
+.kontener-form__uzenet {
+    padding: 15px;
+    font-size: 1.5rem;
+    width: 100%;
+    border: 2px solid #F3F6F4;
+}
+/*--------------------GOMB-------------------*/
+.form-gomb {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 15px;
+    font-size: 1.5rem;  
+}
+
+.kontener-form_gomb {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 15px;
+    font-size: 1.5rem;
+    border: 3px solid #3C3D3C;
+    background-color: #9BAEBC;
+    color: #3C3D3C;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.kontener-form_gomb:hover {
+    background-color: var(--lightgray);
+
 }
 
 
-                /* TABLET -----> */ 
+
+/*---------------------------------------FOOTER------------------------------------------------*/
+
+
+/* --------------- FOOTER KONTÉNER --------------*/
+
+.footer {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+}
+
+/* --------------- FOOTER IKONOK ------------------*/
+
+.footer-ikonok {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: var(--lightgray);
+    transform: scale(0.48);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ikon {
+    display: flex;
+    justify-content: center;
+    width: 80px;
+    margin-left: 50px;
+    margin-right: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.ikon:hover {
+    transition: 0.3s;
+    transform: scale(1.54);
+}
+
+.ikon:hover::before,
+.ikon:hover::after {
+    transition: 0.3s;
+}
+
+/* -------------- FOOTER SZÖVEG --------------- */
+
+.kontener-footer {
+    display: flex;
+    background-color: var(--fekete);
+    color: white;
+    padding: 2em;
+    font-size: 1.5rem;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 -2px 5px var(--gray);
+}
+
+/* ---------------------------------------MEDIA QUERY-----------------------------------------*/
+
+/* -----TABLET -----> */
 @media screen and (max-width:767px) {
-        .navbar-lista, .navbar-menu {
-            visibility: hidden;
-        }
-        
-}
-@media screen and (min-width:768px) {
-    .container {
-        width: 100%;
-    }
-                /* -------------- NAVBAR ----------------*/
-    .kontener-navbar {
-        display: flex;
-        flex-direction: row;
-        background-color: var(--fekete);
-        padding: 3rem;
-        height: 6.5vh;
-        max-width: 100%;
-        justify-content: space-between;
 
-    }
-
+    .navbar-lista,
     .navbar-menu {
-        display: flex;
-        width: 100%;
-        flex-direction: row;
-        justify-content: flex-end;
-        align-items: center;
+        visibility: hidden;
     }
-    
-    .navbar-lista {
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        height: 20px;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-    }
+
+    /* -----LAPTOP-------*/
+}
+
+@media screen and (min-width:768px) {
+
+    /*------------------------------------HEADER-----------------------------------------*/
+
+
+    /* -------------- NAVBAR ----------------*/
 
     .navbar-item {
-        font-size: 1.6rem;
-        margin-right: 1.8rem;
-        margin-left: 1.8rem;
-    } 
+        font-size: 1.8em;
+        margin-right: 2rem;
 
-            /* --------- GRID ----------*/
-    .kontener-navbar {
-        grid-area: navbar;
     }
 
-    .kontener-kep {
-        grid-area: navkep;
-    }
+    /* ------------- HAMBURGER ----------*/
 
-    .kontener-focim {
-        grid-area: navcim;
-    }
-            /* ------------- HAMBURGER ----------*/
-    
     .hamburger-button {
-        visibility: hidden;
+        display: none;
         transition-property: none;
     }
 
     .menu__box {
-        visibility: visible;
-        left: 0;
+        display: none;
         transition-property: none;
     }
 
     .hamburger-lines,
     .hamburger-lines::before,
-    .hamburger-lines::after{
+    .hamburger-lines::after {
         transition-property: none;
     }
 
+    /*------------------------------------------MAIN--------------------------------------*/
 
-}
-                /* ASZTALI -----> */
-@media screen and (min-width: 992px) {
-    .container {
+    /* ------------------------HEADER-KÉP ÉS HEADER-SZÖVEG---------------------*/
+    .focim-kep {
+        display: flex;
         width: 100%;
+        flex-direction: row;
+        height: 500px;
+        position: relative;
+        top: 75px;
     }
-    .kontener-navbar {
-        grid-area: navbar;
+
+    .header-focim {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+        height: 400px;
+    }
+
+    .kontener-focim {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0em;
+        font-size: 1.2rem;
+        background-color: #F3F6F4;
+    }
+
+    .header-kep {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+        height: 587px;
     }
 
     .kontener-kep {
-        grid-area: navkep;
+        display: flex;
+        width: 100%;
+        max-height: 300px;
+        max-width: 300px;
+        background-color: #F3F6F4;
     }
 
-    .kontener-focim {
-        grid-area: navcim;
-    }
 
-    header {
-        display: grid;
-        grid-template-areas:
-        "navbar navbar"
-        "navkep navcim"
-        ;
-    }
-    
     .kontener-kep__item {
-        bottom: 0;
-        height: auto;
-        width: 500vw;
-        padding-top: 10vh;
+        width: 49vw;
+        max-height: 300px;
+        max-width: 300px;
+        opacity: 80%;
+        transition: 300ms;
+        filter: grayscale(30%);
     }
-    
-    .kontener-focim {
-        align-items: center;
-        justify-content: center;
-    } 
 
+
+    .focim__h1 {
+        text-align: center;
+        font-size: 3em;
+        margin: 6vh auto;
+    }
+
+    .span-focim-h1 {
+        text-transform: uppercase;
+        color: #3C3D3C;
+    }
+
+    .focim__h2 {
+        height: 120px;
+        text-align: center;
+        font-size: 3em;
+    }
+
+    /*------------------RÓLAM-SZÖVEG--------------*/
+
+
+    .rolam__cim {
+        font-size: 2.5rem;
+    }
+
+    .rolam__szoveg {
+        font-size: 1.8rem
+    }
+
+    .udv-szoveg {
+        font-size: 2rem;
+    }
+
+    /* ---------- SZAKMAI ISMERETEK-------------*/
+
+    .szakma {
+        height: 20vh;
+        margin-bottom: 20px;
+    }
+
+    .szakmak {
+        min-width: 80px;
+        max-width: 80px;
+        margin-right: 80px;
+        margin-left: 80px;
+    }
+
+    .szakmai__cim {
+        font-size: 2.5rem;
+    }
+
+
+    /* ----------- MUNKÁIM ---------*/
+
+
+    .munkaim-project-konti {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-right: 10px;
+    }
+
+    .munkaim-project {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 20%;
+        height: auto;
+        box-shadow: 2px 2px 5px black;
+        margin: 10px 15px;
+    }
+
+    .kontener-munkaim__cim {
+        font-size: 2.5rem;
+    }
+
+
+    /*-------------ÖNÉLETRAJZ----------*/
+
+    .oneletrajz-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .kontener-oneletrajz {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    .kontener-oneletrajz__tanulmanyok {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 33%;
+        padding: 2em;
+        font-size: 1.5rem;
+        margin-left: 0;
+    }
+
+    .kontener-oneletrajz__nyelv {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 33%;
+        padding: 2em;
+        margin-left: 0;
+    }
+
+    .kontener-oneletrajz__tovabbi {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 33%;
+        padding: 2em;
+        margin-left: 0;
+    }
+
+    .onelet-lista {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .onelet-item {
+        list-style-type: square;
+        font-size: 2rem;
+    }
+
+    .kontener-oneletrajz__cim {
+        font-size: 2.5rem;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .kontener-oneletrajz__nyelv__cim {
+        font-size: 2.5rem;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .kontener-oneletrajz__tovabbi__cim {
+        font-size: 2.5rem;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    /* --------------------- KAPCSOLAT -------------------*/
+
+    .kapcsolat {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .kontener-kapcsolat {
+        display: flex;
+        max-width: 100%;
+    }
+
+    .kontener-form {
+        display: flex;
+        flex-direction: column;
+        padding: 0em;
+        font-size: 1.5rem;
+        max-width: 100%;
+    }
+
+    .kontener-form-1 {
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+        font-size: 1.5rem;
+        max-width: 100%;
+    }
+
+    .kontener-form__nev {
+        padding: 15px;
+        margin-bottom: 20px;
+        border: 2px solid #F3F6F4;
+
+    }
+
+    .kontener-form__email {
+        padding: 15px;
+        border: 2px solid #F3F6F4;
+    }
+
+    .kontener-form-2 {
+        padding: 15px;
+    }
+
+    .kontener-form__uzenet {
+        padding: 15px;
+        font-size: 1.5rem;
+        width: 100%;
+        border: 2px solid #F3F6F4;
+    }
+/*
+    .form-gomb {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 15px;
+        font-size: 1.5rem;
+    }
+
+    .kontener-form_gomb {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 15px;
+        font-size: 1.5rem;
+        border: 3px solid #3C3D3C;
+        background-color: #9BAEBC;
+        color: #3C3D3C;
+        font-weight: 700;
+        cursor: pointer;
+    }
+*/
+    .kontener-kapcsolat {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .kontener-kapcsolat__cim {
+        font-size: 2.5rem;
+    }
+
+    .kontener-kapcsolat__szoveg {
+        font-size: 1.8rem;
+    }
 }
 
-/* ----------------------------------HEADER-----------------------------------------------------*/
+/* ----------------------------------ASZTALI-NAGY-----------------------------------> */
+@media screen and (min-width: 992px) {
 
-                /* -------- KONTÉNER ------------*/
+    /* ----------------------------------HEADER---------------------------------*/
+    /*----------------NAVBAR-----------------------*/
 
-                .kontener-navbar {
-                    display: flex;
-                    flex-direction: row;
-                    background-color: var(--fekete);
-                    padding: 3rem;
-                    height: 7.5vh;
-                    max-width: 100%;
-                    margin-top: 0;
-                    justify-content: space-between;  
-                    z-index: 10000;
-                 }
-                                  /*------------- LOGÓ --------------*/
-                 
-                 .navbar-logo {
-                     display: flex; 
-                     align-items: center;
-                     min-width: 55px;
-                     max-width: 80px;
-                     width: 9vw;
-                     justify-content: space-between;
-                     
-                 }
-                 
-                                 /*-------------- MENÜ ---------------*/
-                 
-                 .navbar-menu {
-                     visibility: visible;
-                     width: 100%;
-                     flex-direction: row;
-                     justify-content: flex-end;
-                     align-items: center;
-                 }
-                 
-                 .navbar-lista {
-                     display: flex;
-                     width: 100%;
-                     flex-direction: row;
-                     justify-content: flex-start;
-                     margin-right: 10px;   
-                 }
-                                 /*--------------------HAMBURGER -----------*/
-                 
-                 .hamburger-button {
-                     display: flex;
-                     align-items: center;
-                     position: fixed;
-                     top: 10px;
-                     left: 30px;
-                     width: 40px;
-                     height: 40px;
-                     cursor: pointer;
-                     z-index: 1;
-                 }
-                                        
-                 .hamburger-lines,
-                 .hamburger-lines::before,
-                 .hamburger-lines::after {
-                     display: block;
-                     position: absolute;
-                     width: 100%;
-                     height: 3px;
-                     background-color: white;
-                     transition-duration: 0.2s;
-                 }
-                 
-                 .hamburger-lines::before {
-                     content: "";
-                     top: -10px;  
-                 }
-                 
-                 .hamburger-lines::after {
-                     content: "";
-                     top: 10px;  
-                 }
-                 
-                 .menu__box {
-                     display: block;
-                     position: fixed;
-                     width: 300px;
-                     padding: 70px 0;
-                     background-color: var(--fekete);
-                     color: white;
-                     top: 15px;
-                     left: 10px;
-                     height: 100%;
-                     visibility: hidden;
-                     box-shadow: 3px 0 8px var(--fekete);
-                     /* átmenet balról */
-                     left: -300px;
-                     transition-duration: 0.5s;
-                 }
-                 
-                 .menu__item {
-                     padding: 20px 30px;
-                     font-size: 24px;
-                     cursor: pointer;
-                 }
-                 
-                 .menu__item:hover {
-                 }
-                 
-                 #menu-toggle {
-                     visibility: hidden;
-                 }
-                 
-                 #menu-toggle:checked ~ .menu__box {
-                     visibility: visible;
-                     left: 0;
-                 }
-                 
-                 #menu-toggle:checked ~ .hamburger-button .hamburger-lines {
-                     transform: rotate(45deg);
-                 }
-                 
-                 #menu-toggle:checked ~ .hamburger-button .hamburger-lines::before {
-                     display: none;
-                 }
-                 
-                 #menu-toggle:checked ~ .hamburger-button .hamburger-lines::after {
-                     top: 0;
-                     transform: rotate(90deg);
-                 }
-                 
-                             /* ---------------- LINK SZÍN ---------------*/
-                             
-                 a:link, a:visited {
-                     color: white;
-                 }
-                 
-                 a:hover {
-                     color: var(--gray);
-                 }
-                 
-                             /* --------------KEP-----------*/
-                 
-                 .kontener-kep {
-                     display: flex;
-                     justify-content: flex-end;
-                     background-color: white;
-                 }
-                 
-                 .kontener-kep__item {
-                     bottom: 0;
-                     height: auto;
-                     width: 50vw;
-                 }
-                 
-                             /* -----------------FŐCÍM-------------*/
-                 
-                 .kontener-focim {
-                     display: flex;
-                     flex-direction: column;
-                     flex-wrap: wrap;
-                     background-color: white;
-                     padding: 8em;
-                     margin-top: 50px;
-                 }
-                 
-                 .focim__h1 {
-                     text-align:center;
-                     font-size: 5em;
-                     margin: 3vh auto;
-                 }
-                 
-                 .focim__h2 {
-                     text-align: center;
-                     font-size: 3em;
-                     
-                 }
-                 
-                 .span-focim-h1 {
-                     text-transform: uppercase;
-                     color: #3C3D3C;
-                 }
-                 
-                 .span-focim-h2 {
-                     color: #3C3D3C;
-                 }
+
+    .navbar-item {
+        font-size: 1.5em;
+        margin-right: 3.8rem;
+    }
+
+    .navbar-logo {
+        top: 5px;
+        max-width: 75px;
+    }
+
+    /*------------------------------------------MAIN--------------------------------------*/
+
+
+    .focim-kep {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        height: 500px;
+        position: relative;
+        top: 75px;
+    }
+
+    .header-focim {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 400px;
+    }
+
+    .kontener-focim {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        width: 100%;
+        padding: 0em;
+        font-size: 1.2rem;
+        background-color: #F3F6F4;
+    }
+
+    .header-kep {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 50%;
+        height: 587px;
+    }
+
+    .kontener-kep {
+        display: flex;
+        width: 100%;
+        max-height: 300px;
+        max-width: 300px;
+        background-color: #F3F6F4;
+    }
+
+    /*----------------HEADER-KÉP----------*/
+
+
+    .kontener-kep__item {
+        width: 49vw;
+        max-height: 300px;
+        max-width: 300px;
+        opacity: 80%;
+        transition: 300ms;
+        filter: grayscale(30%);
+    }
+
+    /*-----------------HEADER-SZÖVEG--------------*/
+
+
+    .focim__h1 {
+        text-align: center;
+        font-size: 3em;
+        margin: 10vh auto;
+    }
+
+    .span-focim-h1 {
+        text-transform: uppercase;
+        color: #3C3D3C;
+    }
+
+    .focim__h2 {
+        height: 120px;
+        text-align: center;
+        font-size: 3em;
+    }
+
+    /* ----------------RÓLAM SZÖVEG-----------------*/
+
+    .kontener-rolam {
+        max-height: 80vh;
+    }
+
+    .rolam-szoveges {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-height: 100%;
+    }
+
+    .rolam__szoveg {
+        max-height: 100%;
+        max-width: 80%;
+        margin: 30px;
+    }
+
+    .rolam__cim {
+        font-size: 2.5rem;
+    }
+
+    .rolam__szoveg {
+        font-size: 1.8rem;
+    }
+
+    .udv-szoveg {
+        font-size: 2rem;
+    }
+
+    /*-------------------------SZAKMAI ISMERETEK--------------------*/
+
+    .szakmai__cim {
+        font-size: 2.5rem;
+    }
+
+    /*----------------------------MUNKÁIM----------------------------*/
+
+    .kontener-munkaim__cim {
+        font-size: 2.5rem;
+    }
+
+    .munkaim-project-konti {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-right: 10px;
+    }
+
+    .munkaim-project {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 20%;
+        height: auto;
+        box-shadow: 2px 2px 5px black;
+        margin: 20px 20px;
+    }
+
+    /*--------------------------ÖNÉLETRAJZ--------------------------------*/
+
+    .kontener-oneletrajz {
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
     
 
-/*---------------------------------------MAIN---------------------------------------------------*/
+    /* ----------------- KAPCSOLAT ----------------*/
+
+    .kapcsolat {
+        display: flex;
+        width: 100%;
+        height: auto;
+    }
 
 
-            /* -----------------RÓLAM--------------------- */
+    .kontener-kapcsolat__cim {
+        font-size: 2.5rem;
+    }
 
-            .kontener-rolam {
-                display: flex;
-                flex-direction: column;
-                background-color: var(--gray);
-                padding: 2em;
-                font-size: 1.5rem;
-                text-align: justify;
-                max-width: 100%;
-            }
-            
-            .rolam__cim {
-                display: flex;
-                padding: 2rem;
-                justify-content: center;
-                align-items: center;
-                font-size: 35px;
-            }
-            
-            .rolam__szoveg {
-                text-align: justify;
-                justify-content: center;
-                max-width: 100%;
-                margin-bottom: 25px;
-            }
-            
-            .udv-szoveg {
-                font-weight: 700;
-                font-size: 2rem;
-                
-            }
-            
-            .udv-szoveg2 {
-                font-weight: 700;
-                margin-top: 20px;
-            }
-            
-                        /* ------------------SZAKMAI ISMERETEK-------------- */
-            
-            .kontener-szakmai {
-                display: flex;
-                flex-direction: column;
-                padding: 2em;
-                font-size: 1.5rem;
-            }
-            
-            .szakmai__cim {
-                text-align: center;
-                padding: 2rem;
-                font-size: 35px;
-            }
-            
-            .szakma {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                width: 100%;
-                height: 10vh;
-                margin-bottom: 50px;
-            }
-            
-            .szakma_conti {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                width: 50%;
-                height: 50%;
-            }
-            
-            .szakmak {
-                display: flex;
-                justify-content: center;
-                flex-wrap: wrap;
-                min-width: 80px;
-                max-width: 120px;
-                margin: 10px;
-            }
-                        
-                        /*--------------- PORTFÓLIÓ -----------------*/
-            
-            .kontener-portfolio {
-                background-color: var(--gray);
-                padding: 2em;
-                font-size: 1.5rem;
-            }
-            
-            .kontener-portfolio__cim {
-                text-align: center;
-                padding: 2rem;
-            }
-            
-            .kontener-portfolio__cim {
-                justify-content: center;
-                background-color: var(--gray);
-                font-size: 2.5em;
-                font-size: 35px;
-            }
-            
-                        /* --------------ÖNÉLETRAJZ ----------------*/
-            
-            .kontener-oneletrajz__tanulmanyok {
-                padding: 2em;
-                font-size: 1.5rem;
-            }
-            
-            .kontener-oneletrajz__cim {
-                text-align: center;
-                padding: 2rem;
-                font-size: 25px;
-            }
-            
-            .kontener-oneletrajz__nyelv {
-                padding: 2em;
-                font-size: 1.5rem;
-            }
-            
-            .kontener-oneletrajz__nyelv__cim {
-                text-align: center;
-                padding: 1rem;
-                font-size: 25px;
-            }
-            
-            .kontener-oneletrajz__eddigi {
-                padding: 2em;
-                font-size: 1.5rem;
-            }
-            
-            .kontener-oneletrajz__eddigi__cim {
-                text-align: center;
-                padding: 1rem;
-                font-size: 25px;
-            }
-            
-            .onelet-lista {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-            }
-            
-            .onelet-item {
-                list-style-type: square;
-                margin: 10px;
-            }
-            
-                        /* ----------------KAPCSOLAT ------------------*/
-            
-            .kontener-kapcsolat {
-                padding: 2em;
-                font-size: 1.5rem;
-            }
-            
-            .kontener-form{
-                display: flex;
-                flex-direction: column;
-                padding: 0em;
-                font-size: 1.5rem;
-            }
-            
-            .kontener-form-1 {
-                display: flex;
-                flex-direction: column;
-                padding: 1em;
-                font-size: 1.5rem;
-            }
-            
-            .kontener-form__nev {
-                padding: 15px;
-                margin-bottom: 20px;
-                border: 2px solid #F3F6F4;
-            }
-            
-            .kontener-form__email {
-                padding: 15px;
-                border: 2px solid #F3F6F4;
-            }
-            
-            .kontener-form-2 {
-                padding: 15px;
-            }
-            
-            .kontener-form__uzenet {
-                padding: 15px;
-                font-size: 1.5rem;
-                width: 100%;
-                border: 2px solid #F3F6F4;
-            }
-            
-            .form-gomb {
-                display: flex;
-                justify-content: center;
-                width: 100%;
-                padding: 15px;
-                font-size: 1.5rem;
-            }
-            
-            .kontener-form_gomb {
-                display: flex;
-                justify-content: center;
-                width: 100%;
-                padding: 15px;
-                font-size: 1.5rem;
-                border: 3px solid #3C3D3C;
-                background-color: #9BAEBC;
-                color: #3C3D3C;
-                font-weight: 700;
-                cursor: pointer;
-            }
-            
-            .kontener-kapcsolat, .kontener-form {
-                background-color: var(--gray);
-                font-size: 1.5rem;
-            }
-            
-            .kontener-kapcsolat__szoveg {
-                padding-top: 10px;
-            }
-            
-            @media screen and (min-width:768px) {
-            
-                            /* ---------- SZAKMAI -------------*/
-            
-                .szakma {
-                    height: 20vh;
-                }
-            
-                .szakmak {
-                    display: flex;
-                    justify-content: center;
-                    flex-wrap: wrap;
-                    min-width: 80px;
-                    max-width: 200px;
-                }
-            
-                .onelet-lista {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                }
-            
-                        /* ----------- PORTFÓLIÓ ---------*/
-            
-                .kontener-portfolio {
-                    background-color: var(--gray);
-                    padding: 2em;
-                    font-size: 1.5rem;
-                    display: flex;
-                    flex-wrap: wrap;
-                    flex-direction: row;
-                }
-            
-                .portfolio-project {
-                    width: 50%;
-                    padding: 5px;
-                }
-            
-                        /* --------------------- KAPCSOLAT -------------------*/
-            
-                .kapcsolat {
-                    display: flex;
-                    justify-content: center;
-                    width: 100%;
-                }
-            
-                .kontener-kapcsolat {
-                    display: flex;
-                    max-width: 100%;
-                }
-            
-                .kontener-form{
-                    display: flex;
-                    flex-direction: column;
-                    padding: 0em;
-                    font-size: 1.5rem;
-                    max-width: 100%;
-                }
-            
-                .kontener-form-1 {
-                    display: flex;
-                    flex-direction: column;
-                    padding: 1em;
-                    font-size: 1.5rem;
-                    max-width: 100%;
-                }
-            
-                .kontener-form__nev {
-                    padding: 15px;
-                    margin-bottom: 20px;
-                    border: 2px solid #F3F6F4;
-            
-                }
-            
-                .kontener-form__email {
-                    padding: 15px;
-                    border: 2px solid #F3F6F4;
-                }
-            
-                .kontener-form-2 {
-                    padding: 15px;
-                }
-            
-                .kontener-form__uzenet {
-                    padding: 15px;
-                    font-size: 1.5rem;
-                    width: 100%;
-                    border: 2px solid #F3F6F4;
-                }
-            
-                .form-gomb {
-                    display: flex;
-                    justify-content: center;
-                    width: 100%;
-                    padding: 15px;
-                    font-size: 1.5rem;
-                }
-            
-                .kontener-form_gomb {
-                    display: flex;
-                    justify-content: center;
-                    width: 100%;
-                    padding: 15px;
-                    font-size: 1.5rem;
-                    border: 3px solid #3C3D3C;
-                    background-color: #9BAEBC;
-                    color: #3C3D3C;
-                    font-weight: 700;
-                    cursor: pointer;
-                }
-            
-                .kontener-kapcsolat {
-                    display: flex;
-                    flex-direction: column;
-                }
-            }
-            
-            @media screen and (min-width: 992px) {
-            
-                            /* ---------------- RÓLAM -----------------*/
-            
-                .kontener-rolam {
-                    display: flex;
-                    flex-direction: column;
-                    background-color: var(--gray);
-                    padding: 2em;
-                    font-size: 1.5rem;
-                    max-width: 100%;
-                }
-                
-                .rolam__cim {
-                    display: flex;
-                    padding: 2rem;
-                    justify-content: center;
-                    align-items: center;
-                }
-                
-                .rolam__szoveg {
-                    text-align: center;
-                    max-width: 100%;
-                    margin: 30px;
-                }
-            }
+    .kontener-kapcsolat__szoveg {
+        font-size: 1.8rem;
+    }
+}
 
-/*---------------------------------------FOOTER------------------------------------------------*/
+@media screen and (min-width: 1440px) {
+    /* ----------------------------------HEADER---------------------------------*/
+    /*----------------NAVBAR-----------------------*/
+
+    .navbar-item {
+        margin-right: 5.8rem;
+        font-size: 1.8em;
+    }
+
+    /*------------------------HEADER FŐCÍM-------------------------*/
+    .kontener-focim {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 449px;
+        padding: 0em;
+        font-size: 1.4rem;
+        background-color: #F3F6F4;
+    }
+
+    .focim__h1 {
+        text-align: center;
+        font-size: 3em;
+        margin: 6vh auto;
+    }
+
+    /*------------------------------RÓLAM-SZÖVEG-------------------------*/
+
+    .kontener-rolam {
+        max-height: 80vh;
+    }
+
+    .rolam-szoveges {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-height: 100%;
+    }
+
+    .rolam__szoveg {
+        max-height: 100%;
+        max-width: 50%;
+        margin: 30px;
+    }
+
+    .rolam__cim {
+        font-size: 2.5rem;
+    }
+
+    .rolam__szoveg {
+        font-size: 1.8rem;
+    }
+
+    .udv-szoveg {
+        font-size: 2rem;
+    }
+
+    /*--------------------------SZAKMAI ISMERETEK----------------------*/
+
+    .szakmak {
+        min-width: 80px;
+        max-width: 120px;
+        margin-right: 80px;
+        margin-left: 80px;
+    }
 
 
-        /* --------------- FOOTER KONTÉNER --------------*/
+    /*---------------------------MUNKÁIM------------------------*/
+    .munkaim-project {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 15%;
+        height: auto;
+        box-shadow: 2px 2px 5px black;
+        margin: 20px 35px;
+    }
 
-        .footer {
-            display: flex;
-            width: 100%;
-            flex-direction: column;
-        }
-                /* -------------- FOOTER SZÖVEG --------------- */
-                
-        .kontener-footer {
-            display: flex;
-            background-color: var(--fekete);
-            color: white;
-            padding: 2em;
-            font-size: 1.5rem;
-            width: 100%;
-            justify-content: center;
-        
-        }
-                /* --------------- FOOTER IKONOK ------------------*/
-        
-        .footer-ikonok {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            background-color: var(--fekete);
-        }
-        
-        .ikon {
-            display: flex;
-            max-width: 150px;
-            padding: 20px;
-            cursor: pointer;
-        }
-        
-        
+    /*-------------------------------- ÖNÉLETRAJZ--------------------------*/
+
+    .kontener-oneletrajz {
+        margin-left: 300px;
+        margin-right: 300px;
+        margin-top: 150px;
+        margin-bottom: 150px;
+    }
+
+    /* ----------------- KAPCSOLAT ----------------*/
+
+    .kontener-kapcsolat__cim {
+        font-size: 2.5rem;
+    }
+
+    .kontener-kapcsolat__szoveg {
+        font-size: 1.8rem;
+    }
+}
