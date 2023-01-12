@@ -12,19 +12,19 @@
     <header class="header">
                         <!-- NAVBAR -->
         <nav class="kontener-navbar">
-            <div class="navbar-menu">
-                <ul class="navbar-lista">
-                    <li class="navbar-item"><a href="./index.html">Kezdőlap</a></li>
-                    <li class="navbar-item"><a href="#rolam">Rólam</a></li>
-                    <li class="navbar-item"><a href="#szakmaiismeretek">Szakmai ismeretek</a></li>
-                    <li class="navbar-item"><a href="#portfolio">Portfólió</a></li>
-                    <li class="navbar-item"><a href="#oneletrajz">Önéletrajz</a></li>
-                    <li class="navbar-item"><a href="#kapcsolat">Kapcsolat</a></li>
-                </ul>
-            </div>
-            <div class="navbar-logo">
-                <a href="./index.html" class="home"><img src="./Assets/images/kj-logo.svg" alt="mainlogo"></a>
-            </div>
+                <div class="navbar-menu">
+                    <ul class="navbar-lista">
+                        <li class="navbar-item"><a href="./index.html">Kezdőlap</a></li>
+                        <li class="navbar-item"><a href="#rolam">Rólam</a></li>
+                        <li class="navbar-item"><a href="#szakmaiismeretek">Szakmai ismeretek</a></li>
+                        <li class="navbar-item"><a href="#portfolio">Munkáim</a></li>
+                        <li class="navbar-item"><a href="#oneletrajz">Önéletrajz</a></li>
+                        <li class="navbar-item"><a href="#kapcsolat">Kapcsolat</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-logo">
+                    <a href="./index.html" class="home"><img src="./Assets/images/logo.png" alt="mainlogo"></a>
+                </div>      
             <!-- HAMBURGER MENÜ -->
             <div class="menu">
                 <input type="checkbox" name="hamburger" id="menu-toggle"/>
@@ -35,28 +35,35 @@
                     <li class="menu__item"><a href="./index.html">Kezdőlap</a></li>
                     <li class="menu__item"><a href="#rolam">Rólam</a></li>
                     <li class="menu__item"><a href="#szakmaiismeretek">Szakmai ismeretek</a></li>
-                    <li class="menu__item"><a href="#portfolio">Portfólió</a></li>
+                    <li class="menu__item"><a href="#portfolio">Munkáim</a></li>
                     <li class="menu__item"><a href="#oneletrajz">Önéletrajz</a></li>
                     <li class="menu__item"><a href="#kapcsolat">Kapcsolat</a></li>
                 </ul>
             </div>
         </nav>
-                        <!-- HEADER FŐCÍM -->
-        <div class="kontener-focim">
-                <h1 class="focim__h1">Helló, a nevem <span class="span-focim-h1">Kiss József</span>,</h1>
-                <h2 class="focim__h2"><span class="span-focim-h2">Front-end</span> fejlesztő vagyok!</h2>
-        </div>
-                        <!-- HEADER KÉP -->
-        <div class="kontener-kep">
-            <p class="alak"></p>
-            <img src="./Assets/images/portfolio.png" alt="portfolio_kep" class="kontener-kep__item">
-        </div>
     </header>
-    <main class="container">   
+    <main>
+                        <!-- HEADER FŐCÍM -->
+            <div class="focim-kep">
+                <div class="header-focim">
+                    <div class="kontener-focim">
+                        <h1 class="focim__h1">Helló, a nevem <br><span class="span-focim-h1">Kiss József</span>,</h1>
+                        <h2 class="focim__h2">Front-end<br>fejlesztő vagyok!</h2>
+                    </div>
+                </div>
+                            <!-- HEADER KÉP -->
+                <div class="header-kep">
+                    <div class="kontener-kep">
+                        <img src="./Assets/images/portfolio.png" alt="portfolio_kep" class="kontener-kep__item">
+                    </div>
+                </div>   
+            </div>
                         <!-- RÓLAM -->
         <div class="kontener-rolam" id="rolam">
-            <h2 class="rolam__cim">Rólam</h2>
+            <div class="rolam-szoveges">
+                <h2 class="rolam__cim">Rólam</h2>
                 <p class="rolam__szoveg"><span class="udv-szoveg">Üdvözöllek a Portfólió oldalamon!</span><br><br>Kiss József vagyok  és jelenleg egy webáruházat üzemeltetek saját vállalkozásként. Emellett az egyik legrégibb álmom megvalósításán is dolgozom, amely a <span class="udv-szoveg2">Front-end fejlesztői</span> karrier. Az egész egy Commodore 64 géppel kezdődött gyerekkoromban, így mindig is közel állt hozzám az informatika világa. Ismereteimet az Eszterházy Károly Egyetem, illetve a Programozás Karrier által tartott tanfolyamán szereztem.</p>
+            </div>        
         </div>
                         <!-- SZAKMAI ISMERETEK -->
         <div class="kontener-szakmai" id="szakmaiismeretek">
@@ -70,51 +77,58 @@
                     <div class="szakmak"><img src="./Assets/images/szakmai-4.svg" alt="logo_git"></div>
                     <div class="szakmak"><img src="./Assets/images/szakmai-5.svg" alt="logo_shoprenter"></div>
                     <div class="szakmak"><img src="./Assets/images/szakmai-6.svg" alt="logo_wordpress"></div>
-            </div>   
+                </div>   
         </div>
-                        <!-- PORTFÓLIÓ -->
-        <h2 class="kontener-portfolio__cim">Kiemelt munkáim</h2>                    
-        <div class="kontener-portfolio" id="portfolio">
-                <div class="portfolio-project">
-                    <img src="./Assets/images/project-1.svg" alt="project1">
+                        <!-- MUNKÁIM -->
+                    
+        <div class="kontener-munkaim" id="munkaim">
+                <h2 class="kontener-munkaim__cim">Munkáim</h2>
+                <div class="munkaim-project-konti">
+                    <div class="munkaim-project">
+                        <img src="./Assets/images/project-1.png" alt="project1">
+                    </div>
+                    <div class="munkaim-project">
+                        <img src="./Assets/images/project-2.png" alt="project2">
+                    </div>
+                    <div class="munkaim-project">
+                        <img src="./Assets/images/project-3.png" alt="project3">
+                    </div>
+                    <div class="munkaim-project">
+                        <img src="./Assets/images/project-4.png" alt="project4">
+                    </div>
                 </div>
-                <div class="portfolio-project">
-                    <img src="./Assets/images/project-2.svg" alt="project2">
-                </div>
-                <div class="portfolio-project">
-                    <img src="./Assets/images/project-3.svg" alt="project3">
-                </div>
-                <div class="portfolio-project">
-                    <img src="./Assets/images/project-4.svg" alt="project4">
-                </div>
+                
         </div>
                         <!-- ÖNÉLETRAJZ -->
-        <div class="kontener-oneletrajz" id="oneletrajz">
-            <div class="kontener-oneletrajz__tanulmanyok">
-                <h2 class="kontener-oneletrajz__cim">Tanulmányok</h2>
-                <ul class="onelet-lista">
-                    <li class="onelet-item">Eszterházy Károly Egyetem</li>
-                    <li class="onelet-item">Széchenyi István Közgazdasági Szakközépiskola</li>
-                </ul>
-            </div>
-            <div class="kontener-oneletrajz__nyelv">
-                <h2 class="kontener-oneletrajz__nyelv__cim">Nyelvismeret</h2>
-                <ul class="onelet-lista">
-                    <li class="onelet-item">Angol</li>
-                </ul>
-            </div>
-            <div class="kontener-oneletrajz__eddigi">
-                <h2 class="kontener-oneletrajz__eddigi__cim">Eddigi Szakmai ismeretek</h2>
-                <ul class="onelet-lista">
-                    <li class="onelet-item">Cég vezetése</li>
-                    <li class="onelet-item">IT ismeretek</li>
-                    <li class="onelet-item">Online marketing</li>
-                    <li class="onelet-item">Shoprenter webáruház építés</li>
-                    <li class="onelet-item">Hulladékgazdálkodási Technológus</li>
-                    <li class="onelet-item">Bútorasztalos / Faipar ismeretek</li>
-                </ul>
+        <div class="oneletrajz-container">
+            <div class="kontener-oneletrajz" id="oneletrajz">
+                <div class="kontener-oneletrajz__tanulmanyok">
+                    <h2 class="kontener-oneletrajz__cim">Tanulmányok</h2>
+                    <ul class="onelet-lista">
+                        <li class="onelet-item">Eszterházy Károly Egyetem</li>
+                        <li class="onelet-item">Széchenyi István Közgazdasági Szakközépiskola</li>
+                    </ul>
+                </div>
+                <div class="kontener-oneletrajz__nyelv">
+                    <h2 class="kontener-oneletrajz__nyelv__cim">Nyelvismeret</h2>
+                    <ul class="onelet-lista">
+                        <li class="onelet-item">Angol</li>
+                    </ul>
+                </div>
+                <div class="kontener-oneletrajz__tovabbi">
+                    <h2 class="kontener-oneletrajz__tovabbi__cim">További Szakmai ismeretek</h2>
+                    <ul class="onelet-lista">
+                        <li class="onelet-item">Cég vezetése</li>
+                        <li class="onelet-item">IT ismeretek</li>
+                        <li class="onelet-item">Online marketing</li>
+                        <li class="onelet-item">Shoprenter webáruház építés</li>
+                        <li class="onelet-item">Hulladékgazdálkodási Technológus</li>
+                        <li class="onelet-item">Bútorasztalos / Faipar ismeretek</li>
+                    </ul>
+                </div>
             </div>
         </div>
+        
         <div class="kapcsolat"> 
                                 <!-- KAPCSOLAT -->
             <div class="kontener-kapcsolat" id="kapcsolat">
@@ -128,10 +142,10 @@
                 </div>
                 <div class="kontener-form-2">
                     <textarea name="uzenet" cols="30" rows="3" placeholder="Üzenet*" class="kontener-form__uzenet"></textarea>
-                </div>
+                </div> 
                 <div class="form-gomb">
                     <input type="submit" name="küldés" id="küldés" class="kontener-form_gomb">
-                </div>    
+                </div>
             </form>  
         </div> 
     </main>
@@ -139,13 +153,13 @@
     <footer class="footer">
         <div class="footer-ikonok">
             <div class="ikon">
-               <a href="https://github.com/jozsef-kiss/jozsef-kiss.github.io" target="_blank"><img src="./Assets/images/ikonok/github-logo.png" alt="github"></a> 
+               <a href="https://github.com/jozsef-kiss/jozsef-kiss.github.io" target="_blank"><img src="./Assets/images/github.png" alt="github"></a> 
             </div>
             <div class="ikon">
-               <a href="https://www.linkedin.com/in/j%C3%B3zsef-kiss-815940254/" target="_blank"><img src="./Assets/images/linkedin.svg" alt=linkedin"></a> 
+               <a href="https://www.linkedin.com/in/j%C3%B3zsef-kiss-815940254/" target="_blank"><img src="./Assets/images/linkedin.png" alt=linkedin"></a> 
             </div>
             <div class="ikon">
-               <a href="mailto:vona.2015@gmail.com" target="_blank"><img src="./Assets/images/email.svg" alt="mail"></a> 
+               <a href="mailto:vona.2015@gmail.com" target="_blank"><img src="./Assets/images/email.png" alt="mail"></a> 
             </div>
         </div>
         <div class="kontener-footer">
