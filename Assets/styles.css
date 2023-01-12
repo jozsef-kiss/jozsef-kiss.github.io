@@ -347,12 +347,12 @@ a:hover {
 }
 
 .munkaim-project-konti:hover .munkaim-project:not(:hover)::after  {
-    background-color: rgba(#000, 0.5);
+    background-color: rgba(#000000, 0.5);
 }
 
 .munkaim-project::after {
-    background-color: rgba(#000, 0);
-    transition: .3s;
+    background-color: rgba(#000000, 0.5);
+    transition: 0.3s;
 }
 
 /* --------------ÖNÉLETRAJZ----------------*/
@@ -525,6 +525,21 @@ a:hover {
     margin-right: 50px;
     cursor: pointer;
     transition: 0.3s;
+}
+
+#git-kep {
+    width: 70px;
+    height: 70px;
+}
+
+#linkedin-kep{
+    width: 70px;
+    height: 70px;
+}
+
+#email-kep{
+    width: 70px;
+    height: 70px;
 }
 
 .ikon:hover {
