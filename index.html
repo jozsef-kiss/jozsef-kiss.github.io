@@ -1,106 +1,174 @@
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Assets/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.js">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&display=swap"
+        rel="stylesheet">
     <title>Kiss József - Front-end Fejlesztő</title>
 </head>
+
 <body>
     <header class="header">
-                        <!-- NAVBAR -->
+        <!-- NAVBAR -->
         <nav class="kontener-navbar">
-                <div class="navbar-menu">
-                    <ul class="navbar-lista">
-                        <li class="navbar-item"><a href="./index.html">Kezdőlap</a></li>
-                        <li class="navbar-item"><a href="#rolam">Rólam</a></li>
-                        <li class="navbar-item"><a href="#szakmaiismeretek">Szakmai ismeretek</a></li>
-                        <li class="navbar-item"><a href="#munkaim">Munkáim</a></li>
-                        <li class="navbar-item"><a href="#oneletrajz">Önéletrajz</a></li>
-                        <li class="navbar-item"><a href="#kapcsolat">Kapcsolat</a></li>
-                    </ul>
-                </div>
-                <div class="navbar-logo">
-                    <a href="./index.html" class="home"><img src="./Assets/images/logo.png" alt="mainlogo"></a>
-                </div>      
+            <div class="navbar-menu">
+                <ul class="navbar-lista">
+                    <li class="navbar-item"><a href="./index.html">Kezdőlap</a></li>
+                    <li class="navbar-item"><a href="#rolam">Rólam</a></li>
+                    <li class="navbar-item"><a href="#szakmaiismeretek">Szakmai ismeretek</a></li>
+                    <li class="navbar-item"><a href="#munkaim">Munkáim</a></li>
+                    <!-- <li class="navbar-item"><a href="#oneletrajz">Önéletrajz</a></li> -->
+                    <li class="navbar-item"><a href="#kapcsolat">Kapcsolat</a></li>
+                </ul>
+            </div>
+            <div class="navbar-logo">
+                <a href="./index.html" class="home"><img src="./Assets/images/logo.png" alt="mainlogo"></a>
+            </div>
             <!-- HAMBURGER MENÜ -->
             <div class="menu">
-                <input type="checkbox" name="hamburger" id="menu-toggle"/>
+                <input type="checkbox" name="hamburger" id="menu-toggle" />
                 <label for="menu-toggle" class="hamburger-button">
                     <span class="hamburger-lines"></span>
-                </label> 
+                </label>
                 <ul class="menu__box">
                     <li class="menu__item"><a href="./index.html">Kezdőlap</a></li>
                     <li class="menu__item"><a href="#rolam">Rólam</a></li>
                     <li class="menu__item"><a href="#szakmaiismeretek">Szakmai ismeretek</a></li>
                     <li class="menu__item"><a href="#munkaim">Munkáim</a></li>
-                    <li class="menu__item"><a href="#oneletrajz">Önéletrajz</a></li>
+                    <!-- <li class="menu__item"><a href="#oneletrajz">Önéletrajz</a></li> -->
                     <li class="menu__item"><a href="#kapcsolat">Kapcsolat</a></li>
                 </ul>
             </div>
         </nav>
     </header>
     <main>
-                        <!-- HEADER FŐCÍM -->
-            <div class="focim-kep">
-                <div class="header-focim">
-                    <div class="kontener-focim">
-                        <h1 class="focim__h1">Helló, a nevem <br><span class="span-focim-h1">Kiss József</span>,</h1>
-                        <h2 class="focim__h2">Front-end<br>fejlesztő vagyok!</h2>
-                    </div>
+        <!-- HEADER FŐCÍM -->
+        <div class="focim-kep nagy-kontener">
+            <div class="header-focim">
+                <div class="kontener-focim">
+                    <h1 class="focim__h1">Helló, a nevem <br><span class="span-focim-h1">Kiss József</span>,</h1>
+                    <h2 class="focim__h2">Front-end<br>fejlesztő vagyok!</h2>
                 </div>
-                            <!-- HEADER KÉP -->
-                <div class="header-kep">
-                    <div class="kontener-kep">
-                        <img src="./Assets/images/portfolio.png" alt="portfolio_kep" class="kontener-kep__item">
-                    </div>
-                </div>   
             </div>
-                        <!-- RÓLAM -->
-        <div class="kontener-rolam" id="rolam">
+            <!-- HEADER KÉP -->
+            <div class="header-kep">
+                <div class="kontener-kep">
+                    <img src="./Assets/images/portfolio.png" alt="portfolio_kep" class="kontener-kep__item">
+                </div>
+            </div>
+        </div>
+        <!-- RÓLAM -->
+        <div class="kontener-rolam nagy-kontener" id="rolam">
             <div class="rolam-szoveges">
                 <h2 class="rolam__cim">Rólam</h2>
-                <p class="rolam__szoveg"><span class="udv-szoveg">Üdvözöllek a Portfólió oldalamon!</span><br><br>Kiss József vagyok  és jelenleg egy webáruházat üzemeltetek saját vállalkozásként. Emellett az egyik legrégibb álmom megvalósításán is dolgozom, amely a <span class="udv-szoveg2">Front-end fejlesztői</span> karrier. Az egész egy Commodore 64 géppel kezdődött gyerekkoromban, így mindig is közel állt hozzám az informatika világa. Ismereteimet az Eszterházy Károly Egyetem, illetve a Programozás Karrier által tartott tanfolyamán szereztem.</p>
-            </div>        
+                <p class="rolam__szoveg"><span class="udv-szoveg">Üdvözöllek a Portfólió oldalamon!</span><br><br>Kiss
+                    József vagyok és jelenleg egy webáruházat üzemeltetek saját vállalkozásként. Emellett az egyik
+                    legrégibb álmom megvalósításán is dolgozom, amely a <span class="udv-szoveg2">Front-end
+                        fejlesztői</span> karrier. Az egész egy Commodore 64 géppel kezdődött gyerekkoromban, így mindig
+                    is közel állt hozzám az informatika világa. Ismereteimet az Eszterházy Károly Egyetem, illetve a
+                    Programozás Karrier által tartott tanfolyamán szereztem.</p>
+            </div>
         </div>
-                        <!-- SZAKMAI ISMERETEK -->
-        <div class="kontener-szakmai" id="szakmaiismeretek">
+        <!-- SZAKMAI ISMERETEK -->
+        <div class="kontener-szakmai nagy-kontener" id="szakmaiismeretek">
             <h2 class="szakmai__cim">Szakmai ismeretek</h2>
-                <div class="szakma">
-                        <div class="szakmak"><img src="./Assets/images/szakmai-1.svg" alt="logo_html5"></div>
-                        <div class="szakmak"><img src="./Assets/images/szakmai-2.svg" alt="logo_css3"></div>
-                        <div class="szakmak"><img src="./Assets/images/szakmai-3.svg" alt="logo_photoshop"></div>
-                </div>
-                <div class="szakma">
-                    <div class="szakmak"><img src="./Assets/images/szakmai-4.svg" alt="logo_git"></div>
-                    <div class="szakmak"><img src="./Assets/images/szakmai-5.svg" alt="logo_shoprenter"></div>
-                    <div class="szakmak"><img src="./Assets/images/szakmai-6.svg" alt="logo_wordpress"></div>
-                </div>   
+            <div class="szakma">
+                <div class="szakmak"><img src="./Assets/images/szakmai-1.svg" alt="logo_html5"></div>
+                <div class="szakmak"><img src="./Assets/images/szakmai-2.svg" alt="logo_css3"></div>
+                <div class="szakmak"><img src="./Assets/images/szakmai-3.svg" alt="logo_photoshop"></div>
+            </div>
+            <div class="szakma">
+                <div class="szakmak"><img src="./Assets/images/szakmai-4.svg" alt="logo_git"></div>
+                <div class="szakmak"><img src="./Assets/images/szakmai-5.svg" alt="logo_shoprenter"></div>
+                <div class="szakmak"><img src="./Assets/images/szakmai-6.svg" alt="logo_wordpress"></div>
+            </div>
         </div>
-                        <!-- MUNKÁIM -->
-                    
-        <div class="kontener-munkaim" id="munkaim">
-                <h2 class="kontener-munkaim__cim">Munkáim</h2>
-                <div class="munkaim-project-konti">
-                    <div class="munkaim-project">
-                        <img src="./Assets/images/project-1.png" alt="project1">
+        <!-- MUNKÁIM -->
+
+        <div class="kontener-munkaim nagy-kontener" id="munkaim">
+            <h2 class="kontener-munkaim__cim">Munkáim</h2>
+            <div class="munkaim-project-konti">
+                <div class="munkaim-project">
+                    <h2 class="projekt-cim">Projekt 1</h2>
+                    <img src="./Assets/images/projekt-kep.png" alt="project1">
+                    <div class="projekt-ikon">
+                        <div class="p-ikon">
+                            <a href="https://github.com/jozsef-kiss/jozsef-kiss.github.io" target="_blank"><img
+                                    src="./Assets/images/github-2_ikon-.png" alt="github" id="p-git-kep"></a>
+                        </div>
+                        <div class="p-ikon">
+                            <a href="https://jozsef-kiss.github.io/" target="_blank"><img
+                                    src="./Assets/images/globe-ikon.png" alt=projekt-weboldal></a>
+                        </div>
                     </div>
-                    <div class="munkaim-project">
-                        <img src="./Assets/images/project-2.png" alt="project2">
-                    </div>
-                    <div class="munkaim-project">
-                        <img src="./Assets/images/project-3.png" alt="project3">
-                    </div>
-                    <div class="munkaim-project">
-                        <img src="./Assets/images/project-4.png" alt="project4">
+                    <div class="projekt-szoveg">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis explicabo quas illum nulla officia ea.</p>
                     </div>
                 </div>
-                
+                <div class="munkaim-project">
+                    <h2 class="projekt-cim">Projekt 2</h2>
+                    <img src="./Assets/images/projekt-kep.png" alt="project2">
+                    <div class="projekt-ikon">
+                        <div class="p-ikon">
+                            <a href="https://github.com/jozsef-kiss/jozsef-kiss.github.io" target="_blank"><img
+                                    src="./Assets/images/github-2_ikon-.png" alt="github" id="p-git-kep"></a>
+                        </div>
+                        <div class="p-ikon">
+                            <a href="https://jozsef-kiss.github.io/" target="_blank"><img
+                                    src="./Assets/images/globe-ikon.png" alt=projekt-weboldal></a>
+                        </div>
+                    </div>
+                    <div class="projekt-szoveg">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis explicabo quas illum nulla officia ea.</p>
+                    </div>
+                </div>
+                <div class="munkaim-project">
+                    <h2 class="projekt-cim">Projekt 3</h2>
+                    <img src="./Assets/images/projekt-kep.png" alt="project3">
+                    <div class="projekt-ikon">
+                        <div class="p-ikon">
+                            <a href="https://github.com/jozsef-kiss/jozsef-kiss.github.io" target="_blank"><img
+                                    src="./Assets/images/github-2_ikon-.png" alt="github" id="p-git-kep"></a>
+                        </div>
+                        <div class="p-ikon">
+                            <a href="https://jozsef-kiss.github.io/" target="_blank"><img
+                                    src="./Assets/images/globe-ikon.png" alt=projekt-weboldal></a>
+                        </div>
+                    </div>
+                    <div class="projekt-szoveg">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis explicabo quas illum nulla officia ea.</p>
+                    </div>
+                </div>
+                <div class="munkaim-project">
+                    <h2 class="projekt-cim">Projekt 4</h2>
+                    <img src="./Assets/images/projekt-kep.png" alt="project4">
+                    <div class="projekt-ikon">
+                        <div class="p-ikon">
+                            <a href="https://github.com/jozsef-kiss/jozsef-kiss.github.io" target="_blank"><img
+                                    src="./Assets/images/github-2_ikon-.png" alt="github"></a>
+                        </div>
+                        <div class="p-ikon">
+                            <a href="https://jozsef-kiss.github.io/" target="_blank"><img
+                                    src="./Assets/images/globe-ikon.png" alt=projekt-weboldal></a>
+                        </div>
+                    </div>
+                    <div class="projekt-szoveg">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis explicabo quas illum nulla officia ea.</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
-                        <!-- ÖNÉLETRAJZ -->
-        <div class="oneletrajz-container">
+        <!-- ÖNÉLETRAJZ
+        <div class="oneletrajz-container nagy-kontener">
             <div class="kontener-oneletrajz" id="oneletrajz">
                 <div class="kontener-oneletrajz__tanulmanyok">
                     <h2 class="kontener-oneletrajz__cim">Tanulmányok</h2>
@@ -127,13 +195,13 @@
                     </ul>
                 </div>
             </div>
-        </div>
-        
-        <div class="kapcsolat"> 
-                                <!-- KAPCSOLAT -->
+        </div> -->
+
+        <div class="kapcsolat nagy-kontener">
+            <!-- KAPCSOLAT -->
             <div class="kontener-kapcsolat" id="kapcsolat">
-                    <h2 class="kontener-kapcsolat__cim">Kapcsolat</h2>
-                    <p class="kontener-kapcsolat__szoveg">Ha bármilyen kérdésed van, keress bátran!</p>
+                <h2 class="kontener-kapcsolat__cim">Kapcsolat</h2>
+                <p class="kontener-kapcsolat__szoveg">Ha bármilyen kérdésed van, keress bátran!</p>
             </div>
             <form action="https://formspree.io/f/mrgvzvke" method="post" class="kontener-form">
                 <div class="kontener-form-1">
@@ -141,31 +209,36 @@
                     <input type="email" name="email" id="email" placeholder="E-mail*" class="kontener-form__email">
                 </div>
                 <div class="kontener-form-2">
-                    <textarea name="uzenet" cols="30" rows="3" placeholder="Üzenet*" class="kontener-form__uzenet"></textarea>
-                </div> 
+                    <textarea name="uzenet" cols="30" rows="3" placeholder="Üzenet*" 
+                        class="kontener-form__uzenet"></textarea>
+                </div>
                 <div class="form-gomb">
                     <input type="submit" name="küldés" id="küldés" class="kontener-form_gomb">
                 </div>
-            </form>  
-        </div> 
+            </form>
+        </div>
     </main>
-                            <!-- FOOTER -->
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-ikonok">
             <div class="ikon">
-               <a href="https://github.com/jozsef-kiss/jozsef-kiss.github.io" target="_blank"><img src="./Assets/images/github.png" alt="github" id="git-kep"></a> 
+                <a href="https://github.com/jozsef-kiss/jozsef-kiss.github.io" target="_blank"><img
+                        src="./Assets/images/github.png" alt="github" id="git-kep"></a>
             </div>
             <div class="ikon">
-               <a href="https://www.linkedin.com/in/j%C3%B3zsef-kiss-815940254/" target="_blank"><img src="./Assets/images/linkedin.png" alt=linkedin id="linkedin-kep"></a> 
+                <a href="https://www.linkedin.com/in/j%C3%B3zsef-kiss-815940254/" target="_blank"><img
+                        src="./Assets/images/linkedin.png" alt=linkedin id="linkedin-kep"></a>
             </div>
             <div class="ikon">
-               <a href="mailto:vona.2015@gmail.com" target="_blank"><img src="./Assets/images/email.png" alt="mail" id="email-kep"></a> 
+                <a href="mailto:vona.2015@gmail.com" target="_blank"><img src="./Assets/images/email.png" alt="mail"
+                        id="email-kep"></a>
             </div>
         </div>
         <div class="kontener-footer">
             <p class="kontener-footer__szoveg">
-            2023 © Minden jog fenntarva | Kiss József - Front-end fejlesztő
+                2023 © Minden jog fenntarva | Kiss József - Front-end fejlesztő
         </div>
     </footer>
 </body>
+
 </html>
