@@ -13,7 +13,7 @@
     padding: 0;
     list-style: none;
     text-decoration: none;
-
+    user-select: none;
 }
 
 html {
@@ -32,9 +32,10 @@ img {
     height: auto;
 }
 
-.container {
-    font-size: 1rem;
+.nagy-kontener {
+    scroll-margin-top: 65px;
 }
+
 
 /* ----------------------------------HEADER-----------------------------------------------------*/
 
@@ -45,11 +46,10 @@ img {
     display: flex;
     flex-direction: row;
     background-color: var(--fekete);
-    padding: 3rem;
+    padding: 3em;
     min-height: 80px;
     max-height: 80px;
     width: 100%;
-    margin-top: 0;
     top: 0;
     justify-content: space-between;
     z-index: 10000;
@@ -235,12 +235,13 @@ a:hover {
 }
 
 .rolam__szoveg {
-    text-align: justify;
+    text-align: start;
     max-width: 100%;
     margin-bottom: 25px;
     font-size: 1.8rem;
     margin-left: 10px;
     margin-right: 10px;
+    line-height: 3.5rem;
 }
 
 .rolam__cim {
@@ -339,6 +340,7 @@ a:hover {
     margin-bottom: 40px;
     cursor: pointer;
     transition: .3s;
+    background-color: var(--lightgray)
 }
 
 .munkaim-project-konti:hover .munkaim-project:not(:hover)  {
@@ -352,6 +354,63 @@ a:hover {
 
 .munkaim-project::after {
     background-color: rgba(#000000, 0.5);
+    transition: 0.3s;
+}
+
+.projekt-cim {
+    padding: 15px;
+}
+
+.projekt-ikon {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: auto;
+}
+
+.p-ikon {
+    display: flex;
+    justify-content: flex-end;
+    width: 15%;
+    height: auto;
+    margin: 15px;
+}
+
+.projekt-szoveg {
+    padding: 0 15px 15px 15px;
+    line-height: 2.5rem;
+    font-size: 1.8rem;
+}
+
+/*-----------IKONOK-----------*/
+
+.p-ikon {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#git-kep {
+    width: 70px;
+    height: 70px;
+}
+
+#linkedin-kep{
+    width: 70px;
+    height: 70px;
+}
+
+#email-kep{
+    width: 70px;
+    height: 70px;
+}
+
+.p-ikon:hover {
+    transition: 0.3s;
+    transform: scale(1.54);
+}
+
+.p-ikon:hover::before,
+.p-ikon:hover::after {
     transition: 0.3s;
 }
 
@@ -407,6 +466,10 @@ a:hover {
 
 /* ----------------KAPCSOLAT ------------------*/
 
+.kapcsolat {
+    margin-top: 50px;
+}
+
 .kontener-kapcsolat {
     padding: 2em;
     font-size: 1.5rem;
@@ -461,6 +524,7 @@ a:hover {
     font-size: 1.5rem;
     width: 100%;
     border: 2px solid #F3F6F4;
+    resize: vertical;
 }
 /*--------------------GOMB-------------------*/
 .form-gomb {
