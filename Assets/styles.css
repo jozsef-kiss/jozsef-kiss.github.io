@@ -198,7 +198,8 @@ a:hover {
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    padding: 8em;
+    height: 100vh;
+    padding-top: 8em;
     position: relative;
     font-size: 1.2rem;
     background-color: #F3F6F4;
@@ -229,7 +230,6 @@ a:hover {
     flex-direction: column;
     background-color: var(--gray);
     padding: 2em;
-    text-align: justify;
     max-width: 100%;
 
 }
@@ -242,6 +242,12 @@ a:hover {
     margin-left: 10px;
     margin-right: 10px;
     line-height: 3.5rem;
+}
+
+#git-kep-rolam {
+    width: 100%;
+    width: 70px;
+    height: 70px;
 }
 
 .rolam__cim {
@@ -261,6 +267,28 @@ a:hover {
     font-weight: 700;
     margin-top: 2rem;
 }
+
+.rolam-git {
+    cursor: pointer;
+    transition: 0.3s;
+    width: 10%;
+}
+
+#git-kep-rolam {
+    width: 70px;
+    height: 70px;
+}
+
+.rolam-git:hover {
+    transition: 0.3s;
+    transform: scale(1.1);
+}
+
+.rolam-git:hover::before,
+.rolam-git:hover::after {
+    transition: 0.3s;
+}
+
 
 
 /* ------------------SZAKMAI ISMERETEK-------------- */
@@ -394,16 +422,6 @@ a:hover {
     height: 70px;
 }
 
-#linkedin-kep{
-    width: 70px;
-    height: 70px;
-}
-
-#email-kep{
-    width: 70px;
-    height: 70px;
-}
-
 .p-ikon:hover {
     transition: 0.3s;
     transform: scale(1.54);
@@ -473,6 +491,7 @@ a:hover {
 .kontener-kapcsolat {
     padding: 2em;
     font-size: 1.5rem;
+    scroll-margin-top: 80px;
 }
 
 .kontener-form {
@@ -566,6 +585,9 @@ a:hover {
     width: 100%;
     height: auto;
     flex-direction: column;
+    background-color: var(--fekete);
+    position: relative;
+    box-shadow: 0 -2px 5px var(--gray);
 }
 
 /* --------------- FOOTER IKONOK ------------------*/
@@ -575,8 +597,8 @@ a:hover {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    width: 100%;
     height: 100px;
-    background-color: var(--lightgray);
     transform: scale(0.48);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -592,18 +614,18 @@ a:hover {
 }
 
 #git-kep {
-    width: 70px;
-    height: 70px;
+    width: 90px;
+    height: 90px;
 }
 
 #linkedin-kep{
-    width: 70px;
-    height: 70px;
+    width: 90px;
+    height: 90px;
 }
 
 #email-kep{
-    width: 70px;
-    height: 70px;
+    width: 90px;
+    height: 90px;
 }
 
 .ikon:hover {
@@ -615,6 +637,75 @@ a:hover {
 .ikon:hover::after {
     transition: 0.3s;
 }
+/*----------------FOOTER LINKEK --------------- */
+
+.footer-linkek {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+}
+
+.footer-link {
+    display: flex;
+    justify-content: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 1.8rem;
+    color: white;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 70%;
+    max-height: 70%;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  .popup .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .popup .close:hover {
+    color: var(--gray);
+  }
+  .popup .content {
+    min-height: 30%;
+    overflow: auto;
+  }
 
 /* -------------- FOOTER SZÖVEG --------------- */
 
@@ -626,9 +717,7 @@ a:hover {
     font-size: 1.5rem;
     width: 100%;
     justify-content: center;
-    position: relative;
-    box-shadow: 0 -2px 5px var(--gray);
-}
+}  
 
 /* ---------------------------------------MEDIA QUERY-----------------------------------------*/
 
@@ -1026,6 +1115,7 @@ a:hover {
         flex-wrap: wrap;
         justify-content: flex-end;
         width: 100%;
+        height: auto;
         padding: 0em;
         font-size: 1.2rem;
         background-color: #F3F6F4;
@@ -1087,10 +1177,6 @@ a:hover {
     }
 
     .rolam-szoveges {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         max-height: 100%;
     }
 
@@ -1098,6 +1184,11 @@ a:hover {
         max-height: 100%;
         max-width: 80%;
         margin: 30px;
+        margin-left: 150px;
+    }
+
+    #git-kep-rolam {
+        margin-left: 150px;
     }
 
     .rolam__cim {
@@ -1207,18 +1298,15 @@ a:hover {
         max-height: 80vh;
     }
 
-    .rolam-szoveges {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        max-height: 100%;
-    }
-
     .rolam__szoveg {
         max-height: 100%;
-        max-width: 50%;
+        max-width: 80%;
         margin: 30px;
+        margin-left: 170px;
+    }
+
+    #git-kep-rolam {
+        margin-left: 170px;
     }
 
     .rolam__cim {
