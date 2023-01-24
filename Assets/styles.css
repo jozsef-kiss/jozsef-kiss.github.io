@@ -289,6 +289,45 @@ a:hover {
     transition: 0.3s;
 }
 
+.rolam-btns {
+    display: flex;
+    margin-left: 10px;
+}
+
+.rolam-btn1 {
+    margin-bottom: 2rem;
+    margin-right: 5rem;
+    border: none;
+}
+
+.rolam-btn2 {
+    margin-bottom: 2rem;
+    margin-right: 5rem;
+    border: none;
+}
+
+.rolam_btn {
+    padding: 1.4rem;
+    background-color: #9baebce3;
+    border: 2px solid var(--fekete);
+    box-shadow: 2px 2px 5px gray;
+}
+
+#rolam-btn_a_1, #rolam-btn_a_2 {
+    color: #000000;
+    font-weight: ;
+}
+
+.rolam-btn1:hover {
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+}
+
+.rolam-btn2:hover {
+    background-color: rgb(0, 0, 0);
+}
+
+
 
 
 /* ------------------SZAKMAI ISMERETEK-------------- */
@@ -1077,6 +1116,9 @@ a:hover {
     /* ----------------------------------HEADER---------------------------------*/
     /*----------------NAVBAR-----------------------*/
 
+    .navbar-lista {
+        margin-left: 11rem;
+    }
 
     .navbar-item {
         font-size: 1.5em;
@@ -1086,7 +1128,10 @@ a:hover {
     .navbar-logo {
         top: 5px;
         max-width: 75px;
+        margin-right: 10rem;
     }
+
+    
 
     /*------------------------------------------MAIN--------------------------------------*/
 
@@ -1184,7 +1229,8 @@ a:hover {
         max-height: 100%;
         max-width: 80%;
         margin: 30px;
-        margin-left: 150px;
+        margin-left: 15rem;
+        margin-right: 10rem;
     }
 
     #git-kep-rolam {
@@ -1201,6 +1247,10 @@ a:hover {
 
     .udv-szoveg {
         font-size: 2rem;
+    }
+
+    .rolam-btns {
+        margin-left: 150px;
     }
 
     /*-------------------------SZAKMAI ISMERETEK--------------------*/
@@ -1301,8 +1351,8 @@ a:hover {
     .rolam__szoveg {
         max-height: 100%;
         max-width: 80%;
-        margin: 30px;
-        margin-left: 170px;
+        margin-left: 25rem;
+        margin-right: 25rem;
     }
 
     #git-kep-rolam {
@@ -1319,6 +1369,18 @@ a:hover {
 
     .udv-szoveg {
         font-size: 2rem;
+    }
+
+    .rolam-btns {
+        margin-left: 25rem;
+    }
+
+    .navbar-lista {
+        margin-left: 20rem;
+    }
+
+    .navbar-logo {
+        margin-right: 25rem;
     }
 
     /*--------------------------SZAKMAI ISMERETEK----------------------*/
