@@ -1131,6 +1131,14 @@ a:hover {
         margin-right: 10rem;
     }
 
+    .navbar-menu {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+
     
 
     /*------------------------------------------MAIN--------------------------------------*/
@@ -1223,6 +1231,9 @@ a:hover {
 
     .rolam-szoveges {
         max-height: 100%;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .rolam__szoveg {
@@ -1322,6 +1333,12 @@ a:hover {
         font-size: 1.8em;
     }
 
+    .navbar-menu {
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     /*------------------------HEADER FŐCÍM-------------------------*/
     .kontener-focim {
         display: flex;
@@ -1348,11 +1365,13 @@ a:hover {
         max-height: 80vh;
     }
 
+
+
     .rolam__szoveg {
         max-height: 100%;
-        max-width: 80%;
-        margin-left: 25rem;
-        margin-right: 25rem;
+        max-width: 1200px;
+        margin-left: 15rem;
+        margin-right: 10rem;
     }
 
     #git-kep-rolam {
@@ -1372,7 +1391,9 @@ a:hover {
     }
 
     .rolam-btns {
-        margin-left: 25rem;
+        max-width: 1200px;
+        margin-left: 15rem;
+        margin-right: 10rem;
     }
 
     .navbar-lista {
@@ -1422,5 +1443,17 @@ a:hover {
 
     .kontener-kapcsolat__szoveg {
         font-size: 1.8rem;
+    }
+}
+
+@media screen and (min-width: 1700px) {
+    .navbar-logo {
+        margin-right: 35rem;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    .navbar-logo {
+        margin-right: 55rem;
     }
 }
