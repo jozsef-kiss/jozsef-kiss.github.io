@@ -4,4 +4,4 @@
 
 A portfólió oldal kizárólag HTML és CSS segítségével készült.
 
-**Verzió: 0.2 2023.01.27.**
+**Verzió: 0.2 2023.02.09.**
