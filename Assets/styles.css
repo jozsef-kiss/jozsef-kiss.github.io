@@ -733,10 +733,6 @@ a:hover {
 .popup .close:hover {
   color: var(--gray);
 }
-.popup .content {
-  min-height: 30%;
-  overflow: auto;
-}
 
 .szabalyzat {
   list-style-type: disc;
