@@ -285,7 +285,13 @@ a:hover {
 
 .rolam-btns {
   display: flex;
-  margin-left: 10px;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.rolam-btns a {
+  color: black;
+  font-size: 1.5rem;
 }
 
 .rolam-btn1 {
@@ -305,25 +311,23 @@ a:hover {
 .rolam_btn {
   padding: 1.4rem;
   background-color: #e1e6e9d1;
-  border: 1px solid #e1e6e9d1;
   box-shadow: 5px 5px 10px gray;
   font-weight: 700;
+  transition-duration: 0.5s;
 }
 
-#rolam-btn_a_1,
 #rolam-btn_a_2 {
-  color: #000000;
+  margin-left: 50px;
 }
 
-.rolam-btn1:hover {
-  background-color: black;
+.rolam_btn:hover {
+  background-color: var(--fekete);
   color: #ffffff;
 }
 
-.rolam-btn2:hover {
-  background-color: black;
+.rolam-btn a:hover {
+  color: white;
 }
-
 /* ------------------SZAKMAI ISMERETEK-------------- */
 
 .kontener-szakmai {
