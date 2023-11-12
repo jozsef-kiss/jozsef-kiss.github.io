@@ -2,6 +2,6 @@
 
 ## Az alábbi link alatt érhető el: (https://jozsef-kiss.github.io/)
 
-A portfólió oldal HTML, CSS illetve minimális JavaScript és Bootstrap segítségével készült.
+A portfólió oldal HTML, CSS, JavaScript és Bootstrap segítségével készült.
 
-**Verzió: 0.2 2023.05.06.**
+**Verzió: 0.2 2023.11.12.**
